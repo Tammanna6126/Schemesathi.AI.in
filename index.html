@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SchemeSaathi helps you discover Indian government schemes in plain language." />
+    <title>SchemeSaathi AI — Find the support you deserve</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <p><span class="pulse-dot"></span> <span data-i18n="topbar">Making government benefits easier to find</span></p>
+      <a href="#how-it-works" data-i18n="howItWorks">How it works <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="SchemeSaathi home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Scheme<span>Saathi</span><small>AI</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#explore" data-i18n="navExplore">Explore schemes</a>
+        <a href="#how-it-works" data-i18n="navGuide">Your guide</a>
+        <a href="#about" data-i18n="navAbout">About us</a>
+      </nav>
+      <div class="header-actions">
+        <label class="language-picker">
+          <span class="sr-only">Language</span>
+          <select id="languageSelect" aria-label="Choose language">
+            <option value="en">English</option>
+            <option value="kn">ಕನ್ನಡ</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </label>
+        <button class="button button-ghost header-profile" id="openProfile" data-i18n="buildProfile">Build my profile</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+    </header>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#explore" data-i18n="navExplore">Explore schemes</a>
+      <a href="#how-it-works" data-i18n="navGuide">Your guide</a>
+      <a href="#about" data-i18n="navAbout">About us</a>
+    </div>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="sparkle">✦</span> <span data-i18n="eyebrow">Your benefits, made simple</span></div>
+          <h1 data-i18n="heroTitle">Find the support<br /><em>meant for you.</em></h1>
+          <p data-i18n="heroDescription">Tell us what you need in your own words. SchemeSaathi finds government schemes that could help you and explains what to do next.</p>
+          <div class="trust-row"><span class="avatars"><i>AS</i><i>RP</i><i>MK</i></span><span data-i18n="trusted">Trusted by 12,000+ citizens across India</span></div>
+        </div>
+        <div class="hero-visual" aria-label="A preview of SchemeSaathi recommendations">
+          <div class="floating-note note-one"><span class="note-icon green">✓</span><span><b>3 schemes</b><small>may fit your needs</small></span></div>
+          <div class="phone-card">
+            <div class="phone-top"><span class="tiny-logo">✦</span><span>SchemeSaathi <b>AI</b></span><span class="signal">•••</span></div>
+            <div class="phone-greeting">Namaste, <b>Priya</b> <span>👋</span></div>
+            <p class="phone-prompt">What would you like help with today?</p>
+            <div class="mini-query"><span>⌕</span> I need help paying college fees <span class="voice">◉</span></div>
+            <div class="match-label">Your top match <span>98% fit</span></div>
+            <div class="mini-scheme"><div class="scheme-symbol blue">◎</div><div><b>National Scholarship Portal</b><small>Education · Central Government</small></div><span>›</span></div>
+            <div class="mini-scheme"><div class="scheme-symbol yellow">♨</div><div><b>PM SVANidhi</b><small>Business · Central Government</small></div><span>›</span></div>
+          </div>
+          <div class="floating-note note-two"><span class="note-icon orange">⌁</span><span><b>Plain language</b><small>in your language</small></span></div>
+          <div class="sun-shape"></div>
+        </div>
+      </section>
+
+      <section class="search-section" id="explore">
+        <div class="section-heading">
+          <div><span class="section-kicker" data-i18n="searchKicker">START WITH A QUESTION</span><h2 data-i18n="searchTitle">What do you need help with?</h2></div>
+          <span class="step-count">01 <i>/</i> 02</span>
+        </div>
+        <form class="query-box" id="queryForm">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="queryInput" autocomplete="off" data-i18n-placeholder="queryPlaceholder" placeholder="Try “I need support for my child’s education”" />
+          <button type="button" class="voice-button" aria-label="Voice input">◉</button>
+          <button class="button button-primary" type="submit"><span data-i18n="findSchemes">Find my schemes</span> <span aria-hidden="true">→</span></button>
+        </form>
+        <div class="suggestions"><span data-i18n="tryOne">Try one of these</span><button type="button" class="suggestion">I am a farmer looking for a loan</button><button type="button" class="suggestion">Help with a new business</button><button type="button" class="suggestion">Scholarships for my daughter</button></div>
+      </section>
+
+      <section class="profile-strip">
+        <div class="profile-icon">♧</div>
+        <div><h3 data-i18n="profileTitle">Want more personal matches?</h3><p data-i18n="profileText">Answer 5 quick questions and we’ll narrow down schemes for your situation.</p></div>
+        <button class="button button-light" id="openProfile2" data-i18n="createProfile">Create my profile <span>→</span></button>
+      </section>
+
+      <section class="results-section" id="results" hidden>
+        <div class="results-head"><div><span class="section-kicker">YOUR POSSIBLE MATCHES</span><h2><span id="resultCount">3</span> schemes found for you</h2></div><button class="filter-button" id="clearResults">Clear search ×</button></div>
+        <div class="results-grid" id="resultsGrid"></div>
+        <div class="disclaimer"><span>ⓘ</span><p>These are <b>potential matches</b> based on the information you shared. Final eligibility is decided by the official department. Always verify details on the official source.</p></div>
+      </section>
+
+      <section class="how-section" id="how-it-works">
+        <div class="section-heading centered"><span class="section-kicker" data-i18n="guideKicker">A LITTLE HELP, A LOT LESS HASSLE</span><h2 data-i18n="guideTitle">From “where do I start?”<br /><em>to “I’ve got this.”</em></h2></div>
+        <div class="steps">
+          <div class="step"><span class="step-number">01</span><div class="step-illustration speech">⌕</div><h3 data-i18n="step1Title">Tell us your story</h3><p data-i18n="step1Text">Ask a question in the words that feel natural to you.</p></div>
+          <div class="step"><span class="step-number">02</span><div class="step-illustration match">✦</div><h3 data-i18n="step2Title">See what fits</h3><p data-i18n="step2Text">Get a clear shortlist, matched to your needs and location.</p></div>
+          <div class="step"><span class="step-number">03</span><div class="step-illustration action">↗</div><h3 data-i18n="step3Title">Take the next step</h3><p data-i18n="step3Text">Understand documents and apply through the official source.</p></div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="about-quote">“</div><blockquote>Good information at the right time can change a family’s future.</blockquote><p>SchemeSaathi is a friendly starting point for discovering public support — built for every Indian, in the language they’re most comfortable with.</p></section>
+    </main>
+
+    <button class="chat-trigger" id="chatTrigger" aria-label="Open AI assistant"><span>✦</span><b data-i18n="askSaathi">Ask Saathi</b><i>1</i></button>
+    <div class="chat-panel" id="chatPanel" hidden>
+      <div class="chat-header"><div><span class="online-dot"></span> Saathi AI <small>Here to help</small></div><button id="closeChat" aria-label="Close chat">×</button></div>
+      <div class="chat-body"><div class="chat-avatar">✦</div><div class="chat-message">Namaste! I can help you find the right government schemes. What’s on your mind?</div></div>
+      <form class="chat-form" id="chatForm"><input placeholder="Type your question..." aria-label="Chat message" /><button aria-label="Send message">→</button></form>
+    </div>
+
+    <div class="modal-backdrop" id="profileModal" hidden>
+      <section class="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profileHeading">
+        <button class="modal-close" id="closeProfile" aria-label="Close profile form">×</button>
+        <span class="section-kicker">FIRST, LET’S PERSONALISE THIS</span><h2 id="profileHeading">Complete your profile</h2><p>Tell us a little about yourself so we can put the most relevant potential schemes first.</p>
+        <form id="profileForm"><label>Your name<input id="profileName" type="text" maxlength="120" placeholder="What should we call you?" required /></label><div class="profile-form-grid"><label>Age<input id="profileAge" type="number" min="1" max="120" placeholder="Your age" required /></label><label>Gender<select id="profileGender" required><option value="">Select gender</option><option value="woman">Woman</option><option value="man">Man</option><option value="non-binary">Non-binary</option><option value="prefer-not-to-say">Prefer not to say</option></select></label></div><label>Where do you live?<select id="profileState" required><option value="">Select your state</option><option>Karnataka</option><option>Maharashtra</option><option>Rajasthan</option><option>Uttar Pradesh</option></select></label><label>What best describes you?<select id="profileProfession" required><option value="">Select an option</option><option value="student">Student</option><option value="farmer">Farmer</option><option value="entrepreneur">Entrepreneur / business owner</option><option value="street-vendor">Street vendor</option><option value="parent">Parent / caregiver</option><option value="worker">Worker / self-employed</option></select></label><button class="button button-primary" type="submit">See my best matches <span>→</span></button></form>
+      </section>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
