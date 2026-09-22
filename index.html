@@ -11,30 +11,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="auth-gate" id="authGate">
-      <section class="auth-card" aria-labelledby="authTitle">
-        <div class="auth-brand"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>Scheme<span>Saathi</span><small>AI</small></span></div>
-        <div class="auth-icon">✦</div>
-        <span class="section-kicker">WELCOME TO SCHEMESAATHI</span>
-        <h1 id="authTitle">Your benefits,<br /><em>just a tap away.</em></h1>
-        <p class="auth-intro">Sign in with your mobile number to discover government schemes matched to your needs.</p>
-        <form id="authForm" novalidate>
-          <label class="auth-label" for="phoneInput">Mobile number</label>
-          <div class="phone-field"><span>🇮🇳 +91</span><input id="phoneInput" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel" placeholder="Enter 10-digit mobile number" required /></div>
-          <button class="button button-primary auth-submit" type="submit">Get OTP <span>→</span></button>
-        </form>
-        <form id="otpForm" hidden novalidate>
-          <label class="auth-label" for="otpInput">Enter the 6-digit OTP</label>
-          <input class="otp-field" id="otpInput" type="text" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="•  •  •  •  •  •" />
-          <p class="otp-hint">OTP sent to <b id="phonePreview"></b> <button type="button" id="changePhone">Change</button></p>
-          <button class="button button-primary auth-submit" type="submit">Verify &amp; continue <span>→</span></button>
-          <button class="resend-button" id="resendOtp" type="button">Resend OTP</button>
-        </form>
-        <p class="auth-error" id="authError" role="alert"></p>
-        <p class="auth-footnote">By continuing, you agree to use SchemeSaathi for discovering public information. We never share your number.</p>
-        <p class="demo-otp" id="demoOtp" hidden>Demo mode: use OTP <b>123456</b></p>
-      </section>
-    </div>
     <div class="topbar">
       <p><span class="pulse-dot"></span> <span data-i18n="topbar">Making government benefits easier to find</span></p>
       <a href="#how-it-works" data-i18n="howItWorks">How it works <span aria-hidden="true">↗</span></a>

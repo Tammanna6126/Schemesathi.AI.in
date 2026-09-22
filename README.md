@@ -25,7 +25,7 @@ Open `http://localhost:4173`. API docs are available at `http://127.0.0.1:8000/d
 
 - English, Kannada, and Hindi UI text switching
 - Natural-language scheme query with API-backed matching and local fallback
-- Mobile login gate with real SMS OTP through Twilio Verify when configured
+- Optional profile form for more personal matches; the homepage is open without a login gate
 - Profession-aware profile matching for students, farmers, vendors, entrepreneurs, workers, and parents
 - Potential-match cards with eligibility, document, and official-source details
 - AI assistant/chat affordance with a demo response
@@ -33,4 +33,4 @@ Open `http://localhost:4173`. API docs are available at `http://127.0.0.1:8000/d
 
 Eligibility is intentionally labelled as potential and the UI points users to the official source for confirmation.
 
-Real SMS setup is documented in `backend/README.md`. For local-only development, set `SCHEMESAATHI_DEMO_OTP=true` to enable the clearly marked `123456` demo OTP. SQLite is used for MVP profile persistence; PostgreSQL can replace it behind the same API boundary.
+Real SMS setup is documented in `backend/README.md` for a future secured deployment. The current frontend intentionally does not block browsing behind login. SQLite is used for MVP profile persistence; PostgreSQL can replace it behind the same API boundary.
